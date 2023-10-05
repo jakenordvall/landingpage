@@ -1,0 +1,25 @@
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button.open .line:nth-child(1) {
+  transform: rotate(-45deg) translateY(4px) translateX(2px);
+}
+
+.nav-button.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-button.open .line:nth-child(3) {
+  transform: rotate(45deg) translateY(-4px) translateX(2px);
+}
+
+.line {
+  background-color: white;
+  height: 2px;
+  margin: 3px 0;
+  width: 24px;
+  transition: all 0.3s;
+}
