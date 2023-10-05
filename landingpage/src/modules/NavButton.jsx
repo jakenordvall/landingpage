@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import "./NavButton.css"; // Assuming you have a CSS file for custom styles
+import "./NavButton.css";
 
-function Navbutton() {
+function Navbutton({ handleClickSidebar }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+    handleClickSidebar();
   };
 
   return (
     <button
-      className={`nav-button ${isOpen ? "open" : ""}`}
+      className={`nav-button ${isOpen ? "open" : ""} mr-3`}
       onClick={handleClick}
     >
       <div className="relative flex items-center justify-center">
