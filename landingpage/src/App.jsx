@@ -4,6 +4,7 @@ import Navbar from "./modules/Navbar";
 import Sidebar from "./modules/Sidebar";
 import GoToTopButton from "./modules/GoToTopButton";
 import "./App.css";
+import IntroSection from "./modules/IntroSection";
 
 function App() {
   const [clicked, setClicked] = useState(false); // states for hamburger menu and sidebar
@@ -18,6 +19,7 @@ function App() {
         clicked={clicked}
         handleClickSidebar={handleClickSidebar}
       ></Sidebar>
+      <IntroSection></IntroSection>
       <GoToTopButton></GoToTopButton>
     </div>
   );
