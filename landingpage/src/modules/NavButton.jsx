@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./NavButton.css";
+import { AppContext } from "./AppContextProvider";
 
-function Navbutton({ handleClickSidebar }) {
-  const [isOpen, setIsOpen] = useState(false);
+function Navbutton() {
+  const [isOpen, setIsOpen, handleClickSidebar] = useContext(AppContext);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -11,6 +12,7 @@ function Navbutton({ handleClickSidebar }) {
 
   return (
     <button
+      id="navButton"
       className={`nav-button ${isOpen ? "open" : ""} mr-3`}
       onClick={handleClick}
     >
